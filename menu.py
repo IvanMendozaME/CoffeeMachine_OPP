@@ -21,9 +21,12 @@ class Menu():
             options += f"{i.name}/"
         return options
     def find_drink(self, order_name):
+        drinks = []
         for i in self.menu:
-            if i.name == order_name:
-                return i.name
+             drinks.append(i.name)
+        for i in drinks:
+            if  order_name in drinks:
+                    return order_name
             else:
-                print("Sorry, that item does not exist")
-                return "False"
+                    print("Sorry, that item does not exist")
+                    return "False"
